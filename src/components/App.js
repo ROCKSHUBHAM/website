@@ -11,22 +11,16 @@ const App = () => {
     }, 3000)
   })
   return (
-    <div className='home'>
-      {
-        loading === true ?
-          <div className='comingSoon'>
-            <img style={{ height: "20vw" ,display:"block"}} src={img2} alt='images' />
-            <h1> <Wave
-              text="Coming Soon"
-              effect="stretch"
-              effectChange="2"
-              className="animated"
-            />
-            </h1>
-          </div>
-          : <img className='img1' src={img1} alt='images' />
-      }
-    </div>
+    <div className='comingSoon'>
+    <img style={{ height: "20vw" ,display:"block"}} src={img2} alt='images' />
+    <h1> <Wave
+      text="Coming Soon"
+      effect="stretch"
+      effectChange="2"
+      className="animated"
+    />
+    </h1>
+  </div>
   )
 }
 
