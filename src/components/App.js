@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import img1 from '../images/1.jpg';
+import img2 from '../images/2.jpeg';
 import { Wave } from 'react-animated-text';
 import './App.css'
 const App = () => {
-  let[loading,setloading]=useState(false);
-  useEffect(()=>{
-    setTimeout(()=>{
+  let [loading, setloading] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
       setloading(true);
-    },3000)
+    }, 3000)
   })
   return (
-    <div>
-        {
-          loading===true?<h1 className='comingSoon'><Wave
-          text="Coming Soon"
-          effect="stretch"
-          effectChange="2"
-          className="animated"
-        /></h1>:<img  src={img1}  alt='images'/>
-        }
+    <div className='home'>
+      {
+        loading === true ?
+          <div className='comingSoon'>
+            <img style={{ height: "20vw" ,display:"block"}} src={img2} alt='images' />
+            <h1> <Wave
+              text="Coming Soon"
+              effect="stretch"
+              effectChange="2"
+              className="animated"
+            />
+            </h1>
+          </div>
+          : <img className='img1' src={img1} alt='images' />
+      }
     </div>
   )
 }
